@@ -66,6 +66,34 @@ A comprehensive React Native inventory management application built with Expo, f
   </tr>
 </table>
 
+
+## Quick Start - Run on Your Device
+
+To quickly run this app on your mobile device:
+
+1. **Install Expo Go app on your device**
+   - Download from [App Store (iOS)](https://apps.apple.com/app/expo-go/id982107779) or [Google Play Store (Android)](https://play.google.com/store/apps/details?id=host.exp.exponent)
+
+2. **Download the repository**
+   ```bash
+   git clone https://github.com/yousefwahba/Inventory-Management-App.git
+   cd inventory-app
+   ```
+3. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server**
+   ```bash
+   npx expo start
+   ```
+
+5. **Scan QR code with your device**
+   - Open Expo Go app on your device
+   - Scan the QR code displayed in your terminal or browser
+   - The app will load automatically on your device
+
 ## Features
 
 ### 1. Login Screen
@@ -138,7 +166,7 @@ The system automatically handles:
 - **Total Amount**: Subtotal + VAT
 - **Inventory Updates**: Automatic stock reduction upon invoice creation
 
-## Installation and Setup
+## Installation and Setup Details
 
 ### Prerequisites
 - Node.js (v16 or higher)
@@ -150,7 +178,7 @@ The system automatically handles:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/yousefwahba/Inventory-Management-App.git
    cd inventory-app
    ```
 
@@ -169,32 +197,6 @@ The system automatically handles:
    - Press `i` for iOS simulator
    - Press `a` for Android emulator
    - Press `w` for web browser
-
-## Quick Start - Run on Your Device
-
-To quickly run this app on your mobile device:
-
-1. **Install Expo Go app on your device**
-   - Download from [App Store (iOS)](https://apps.apple.com/app/expo-go/id982107779) or [Google Play Store (Android)](https://play.google.com/store/apps/details?id=host.exp.exponent)
-
-2. **Download the repository**
-   ```bash
-   cd inventory-app
-   ```
-3. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-4. **Start the development server**
-   ```bash
-   npx expo start
-   ```
-
-5. **Scan QR code with your device**
-   - Open Expo Go app on your device
-   - Scan the QR code displayed in your terminal or browser
-   - The app will load automatically on your device
 
 ## Project Structure
 
