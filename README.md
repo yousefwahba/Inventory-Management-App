@@ -3,8 +3,9 @@
 A comprehensive React Native inventory management application built with Expo, featuring item tracking, customer management, and invoice generation with VAT calculations.
 
 ## Demo
-<!-- ### Application Demo Video
-![Demo Video](./assets/screenshots/demo.mov) -->
+### Application Demo Video
+[Demo Video](https://player.cloudinary.com/embed/?cloud_name=dilyj0hzt&public_id=demo_shxuf4&profile=cld-default
+)
 ### Application Screenshots
 
 <table>
@@ -119,74 +120,6 @@ A comprehensive React Native inventory management application built with Expo, f
 - **UI Components**: React Native Elements and Vector Icons
 - **Form Handling**: Custom validation with React hooks
 - **Date Management**: React Native DateTimePicker
-
-### Database Schema
-
-The application uses SQLite with the following normalized tables:
-
-#### Categories Table
-```sql
-CREATE TABLE categories (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT NOT NULL,
-  description TEXT,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-#### Items Table
-```sql
-CREATE TABLE items (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT NOT NULL,
-  category_id INTEGER,
-  price DECIMAL(10,2) NOT NULL,
-  quantity INTEGER NOT NULL,
-  description TEXT,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (category_id) REFERENCES categories(id)
-);
-```
-
-#### Customers Table
-```sql
-CREATE TABLE customers (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT NOT NULL,
-  phone TEXT NOT NULL,
-  email TEXT,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-#### Invoices Table
-```sql
-CREATE TABLE invoices (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  invoice_number TEXT UNIQUE NOT NULL,
-  customer_id INTEGER,
-  invoice_date DATE NOT NULL,
-  subtotal DECIMAL(10,2) NOT NULL,
-  vat_amount DECIMAL(10,2) NOT NULL,
-  total_amount DECIMAL(10,2) NOT NULL,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (customer_id) REFERENCES customers(id)
-);
-```
-
-#### Invoice Items Table
-```sql
-CREATE TABLE invoice_items (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  invoice_id INTEGER,
-  item_id INTEGER,
-  quantity INTEGER NOT NULL,
-  unit_price DECIMAL(10,2) NOT NULL,
-  extended_amount DECIMAL(10,2) NOT NULL,
-  FOREIGN KEY (invoice_id) REFERENCES invoices(id),
-  FOREIGN KEY (item_id) REFERENCES items(id)
-);
-```
 
 ### CRUD Operations
 
